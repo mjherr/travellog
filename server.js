@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
 })
 
 //users
-
+const { default: userRouter } = require('./routes/user_routes')
+app.use('/user', userRouter)
 
 //posts
 
