@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const placeSchema = new mongoose.Schema({
+const PlaceSchema = new mongoose.Schema({
   place: {
     type: String,
     required: true
@@ -21,7 +21,11 @@ const placeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  date: {
+    type: Date,
+    default: Date.now
+  },
 })
 
-module.exports = mongoose.model('Place', placeSchema)
+module.exports = mongoose.model('Place', PlaceSchema)
 
