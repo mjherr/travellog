@@ -3,12 +3,12 @@ const router = require("express").Router()
 const place = require("../models/places")
 
 //create post
-router.post("/", async(req, res) => {
+router.post('/', async(req, res) => {
     const newPost = new Post(req.body)
 
     try{
         const savedPost = await newPost.save()
-        res.status(200).json(newPost)
+        res.status(200).json(savedPost)
         console.log('New Post Added!')
     }
     catch(err){
@@ -17,3 +17,6 @@ router.post("/", async(req, res) => {
 })
 
 //get all posts
+router.get('/', async(req, res) => {
+
+})
